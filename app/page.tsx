@@ -257,7 +257,7 @@ export default function Portfolio() {
       <footer className="border-t py-6 md:py-0">
         <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
           <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-            © 2024 奈須大輝 (Daiki Nasu). All rights reserved.
+            © 2024 奈須大輝 (Hiroki Nasu). All rights reserved.
           </p>
         </div>
       </footer>
