@@ -40,9 +40,9 @@ export default function Portfolio() {
         <div className="flex flex-col items-center text-center space-y-8">
           <div className="space-y-4">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">奈須大輝</h1>
-            <h2 className="text-xl text-muted-foreground sm:text-2xl">Daiki Nasu</h2>
+            <h2 className="text-xl text-muted-foreground sm:text-2xl">Hiroki Nasu</h2>
             <p className="mx-auto max-w-[700px] text-gray-600 md:text-xl">
-              静岡大学情報学部情報社会学科3年 | 認知科学研究者
+              静岡大学情報学部白砂研究室 | 認知科学研究者
             </p>
             <p className="mx-auto max-w-[600px] text-gray-500">Cognitive Science Researcher at Shizuoka University</p>
           </div>
