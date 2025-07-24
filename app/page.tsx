@@ -242,7 +242,7 @@ export default function Portfolio() {
                   </Button>
                 </div>
                 <div className="pt-4 border-t">
-                  <p className="text-sm text-muted-foreground">静岡大学情報学部情報社会学科 白砂研究室</p>
+                  <p className="text-sm text-muted-foreground">静岡大学情報学部行動情報学科 白砂研究室</p>
                   <p className="text-sm text-muted-foreground">
                     Shirasuna Laboratory, Faculty of Informatics, Shizuoka University
                   </p>
@@ -257,7 +257,7 @@ export default function Portfolio() {
       <footer className="border-t py-6 md:py-0">
         <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
           <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-            © 2024 奈須大輝 (Hiroki Nasu). All rights reserved.
+            © 2025 奈須大輝 (Hiroki Nasu). All rights reserved.
           </p>
         </div>
       </footer>
