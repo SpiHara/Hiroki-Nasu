@@ -1,31 +1,21 @@
-import type { Metadata } from 'next'
-import { GeistSans } from 'geist/font/sans'
-import { GeistMono } from 'geist/font/mono'
-import './globals.css'
+import "./globals.css"
+import { Inter } from "next/font/google"
+import Header from "@/components/Header"
 
-export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.dev',
+const inter = Inter({ subsets: ["latin"] })
+
+export const metadata = {
+  title: "奈須大輝 ポートフォリオ",
+  description: "静岡大学情報学部 白砂研究室 | 認知科学研究者",
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <head>
-        <style>{`
-html {
-  font-family: ${GeistSans.style.fontFamily};
-  --font-sans: ${GeistSans.variable};
-  --font-mono: ${GeistMono.variable};
-}
-        `}</style>
-      </head>
-      <body>{children}</body>
+    <html lang="ja">
+      <body className={inter.className}>
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }
