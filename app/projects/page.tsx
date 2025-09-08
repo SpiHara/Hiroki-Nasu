@@ -43,13 +43,13 @@ export default function ProjectsPage() {
           <p className="text-center">読み込み中...</p>
         ) : (
           <>
-            <div className="grid gap-6 md:grid-cols-2">
+            <div className="grid gap-4 sm:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
               {displayedRepos.map((repo, i) => (
                 <a
                   key={i}
                   href={repo.html_url}
                   target="_blank"
-                  className="block p-6 bg-white rounded-xl shadow hover:shadow-lg transition-shadow"
+                  className="block p-5 sm:p-6 bg-white rounded-xl shadow hover:shadow-lg transition-shadow"
                 >
                   <h2 className="text-xl font-semibold mb-2">{repo.name}</h2>
                   <p className="text-gray-500 text-sm">{repo.description}</p>
