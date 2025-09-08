@@ -19,7 +19,7 @@ export default function Header() {
           <Link href="/projects" className="transition-colors hover:text-blue-600">
             Projects
           </Link>
-          <Link href="#contact" className="transition-colors hover:text-blue-600">
+          <Link href="/#contact" className="transition-colors hover:text-blue-600">
             Contact
           </Link>
         </nav>
