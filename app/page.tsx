@@ -10,30 +10,7 @@ import Link from "next/link"
 export default function Portfolio() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-14 items-center">
-          <div className="mr-4 flex">
-            <Link href="/" className="mr-6 flex items-center space-x-2">
-              <span className="font-bold">奈須大輝</span>
-            </Link>
-          </div>
-          <nav className="flex items-center space-x-6 text-sm font-medium">
-            <Link href="#about" className="transition-colors hover:text-foreground/80">
-              About
-            </Link>
-            <Link href="#education" className="transition-colors hover:text-foreground/80">
-              Education
-            </Link>
-            <Link href="#research" className="transition-colors hover:text-foreground/80">
-              Research
-            </Link>
-            <Link href="#contact" className="transition-colors hover:text-foreground/80">
-              Contact
-            </Link>
-          </nav>
-        </div>
-      </header>
+      
 
       {/* Hero Section */}
       <section className="container py-24 md:py-32">
