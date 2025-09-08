@@ -42,31 +42,31 @@ export default function NoteList() {
   if (notes.length === 0) return <p className="text-gray-500">No notes available.</p>;
 
   return (
-    <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="space-y-6">
       {notes.map((note) => (
         <div
           key={note.link}
-          className="border rounded-lg p-4 hover:shadow-lg transition-shadow duration-200 bg-white"
+          className="border rounded-lg p-4 hover:shadow-lg transition-shadow duration-200"
         >
           <a
             href={note.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-lg sm:text-xl font-semibold text-blue-600 hover:underline"
+            className="text-xl font-semibold text-blue-600 hover:underline"
           >
             {note.title}
           </a>
-          <p className="text-xs sm:text-sm text-gray-500 mt-1">
+          <p className="text-sm text-gray-500 mt-1">
             {new Date(note.pubDate).toLocaleString()}
           </p>
-          <p className="mt-2 text-gray-700 text-sm leading-relaxed">
+          <p className="mt-2 text-gray-700">
             {note.content.length > 150 ? note.content.slice(0, 150) + "…" : note.content}
           </p>
           <a
             href={note.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline mt-3 inline-block text-sm"
+            className="text-blue-500 hover:underline mt-2 block"
           >
             続きをみる
           </a>
