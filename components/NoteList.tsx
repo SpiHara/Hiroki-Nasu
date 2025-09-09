@@ -2,6 +2,7 @@
 "use client"; // これが必須：クライアント専用コンポーネントにする
 
 import { useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
 
 type Note = {
   title: string;
@@ -62,6 +63,17 @@ export default function NoteList() {
           <p className="mt-2 text-gray-700">
             {note.content.length > 150 ? note.content.slice(0, 150) + "…" : note.content}
           </p>
+          <div className="mt-3">
+            <Button asChild>
+              <a
+                href={note.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                続きをみる
+              </a>
+            </Button>
+          </div>
         </div>
       ))}
     </div>
