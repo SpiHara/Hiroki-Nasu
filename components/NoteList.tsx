@@ -62,14 +62,6 @@ export default function NoteList() {
           <p className="mt-2 text-gray-700">
             {note.content.length > 150 ? note.content.slice(0, 150) + "…" : note.content}
           </p>
-          <a
-            href={note.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-500 hover:underline mt-2 block"
-          >
-            続きをみる
-          </a>
         </div>
       ))}
     </div>
