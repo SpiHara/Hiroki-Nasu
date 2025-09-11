@@ -14,15 +14,9 @@ export default function ProjectsPage() {
     async function fetchRepos() {
       setLoading(true)
       try {
-        const cached = localStorage.getItem("github_repos")
-        if (cached) {
-          setRepos(JSON.parse(cached))
-        } else {
-          const res = await fetch("https://api.github.com/users/SpiHara/repos")
-          const data = await res.json()
-          setRepos(data)
-          localStorage.setItem("github_repos", JSON.stringify(data))
-        }
+        const res = await fetch("https://api.github.com/users/SpiHara/repos")
+        const data = await res.json()
+        setRepos(data)
       } catch (err) {
         console.error(err)
       } finally {
@@ -73,3 +67,4 @@ export default function ProjectsPage() {
     </div>
   )
 }
+
