@@ -7,10 +7,13 @@ export default function ContactPage() {
 
   const handleSelect = (value: string) => {
     if (value === "email") {
+      // メールソフトを起動して宛先をセット
       window.location.href = "mailto:nasu.hiroki.23@shiuzoka.ac.jp"
     } else if (value === "github") {
+      // GitHubプロフィールを新しいタブで開く
       window.open("https://github.com/SpiHara", "_blank")
     } else if (value === "linkedin") {
+      // LinkedInは強制的に404へ
       router.push("/not-found")
     }
   }
@@ -46,4 +49,5 @@ export default function ContactPage() {
     </div>
   )
 }
+
 
