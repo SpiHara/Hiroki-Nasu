@@ -6,6 +6,8 @@ import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 import { Mail, Github, Linkedin, BookOpen, GraduationCap, Brain, Users } from "lucide-react"
 import Link from "next/link"
+import { ProtectedImage } from "@/components/ui/protected-image"
+
 
 export default function Portfolio() {
   return (
@@ -15,6 +17,16 @@ export default function Portfolio() {
       {/* Hero Section */}
       <section className="container py-24 md:py-32">
         <div className="flex flex-col items-center text-center space-y-8">
+          {/* プロフィール画像 */}
+          <div className="relative">
+            <ProtectedImage
+              src="/photo.jpg"
+              alt="奈須大輝のプロフィール画像"
+              width={200}
+              height={200}
+              className="rounded-full border-4 border-white shadow-xl object-cover"
+            />
+          </div>
           <div className="space-y-4">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">奈須大輝</h1>
             <h2 className="text-xl text-muted-foreground sm:text-2xl">Hiroki Nasu</h2>
@@ -48,6 +60,18 @@ export default function Portfolio() {
             <CardContent className="p-8">
               <div className="grid gap-6 md:grid-cols-2">
                 <div className="space-y-4">
+                  {/* 画像を左側に追加 */}
+                  <div className="flex justify-center md:justify-start">
+                    <ProtectedImage
+                      src="/photo.jpg"
+                      alt="奈須大輝"
+                      width={300}
+                      height={300}
+                      className="rounded-lg shadow-lg object-cover w-full max-w-sm"
+                    />
+                  </div>
+                </div>
+                <div className="space-y-4">
                   <h3 className="text-xl font-semibold">自己紹介</h3>
                   <p className="text-gray-600 leading-relaxed">
                     静岡大学情報学部情報社会学科の3年生として、認知科学の分野で研究に取り組んでいます。
@@ -57,9 +81,7 @@ export default function Portfolio() {
                     人間の認知プロセスと情報処理の関係性について深く探求し、
                     社会における情報技術の役割を理解することを目指しています。
                   </p>
-                </div>
-                <div className="space-y-4">
-                  <h3 className="text-xl font-semibold">研究興味</h3>
+                  <h3 className="text-xl font-semibold pt-4">研究興味</h3>
                   <div className="flex flex-wrap gap-2">
                     <Badge variant="secondary">認知科学</Badge>
                     <Badge variant="secondary">適応的道具箱</Badge>
