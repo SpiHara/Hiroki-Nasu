@@ -66,6 +66,7 @@ export default function Portfolio() {
                   <p className="text-gray-600 leading-relaxed">
                     静岡大学情報学部情報社会学科の3年生として、認知科学の分野で研究に取り組んでいます。
                     白砂研究室に所属し、適応的道具箱に関する研究を行っています。
+                    指導教員：白砂大先生（<a href="https://sites.google.com/view/masaru-shirasuna/home" target="_blank" rel="noopener noreferrer">https://sites.google.com/view/masaru-shirasuna/home</a>）
                   </p>
                   <p className="text-gray-600 leading-relaxed">
                     人間の認知プロセスと情報処理の関係性について深く探求し、
