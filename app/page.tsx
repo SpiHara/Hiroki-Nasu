@@ -17,16 +17,6 @@ export default function Portfolio() {
       {/* Hero Section */}
       <section className="container py-24 md:py-32">
         <div className="flex flex-col items-center text-center space-y-8">
-          {/* プロフィール画像 */}
-          <div className="relative">
-            <ProtectedImage
-              src="/photo.jpg"
-              alt="奈須大輝のプロフィール画像"
-              width={200}
-              height={200}
-              className="rounded-full border-4 border-white shadow-xl object-cover"
-            />
-          </div>
           <div className="space-y-4">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">奈須大輝</h1>
             <h2 className="text-xl text-muted-foreground sm:text-2xl">Hiroki Nasu</h2>
