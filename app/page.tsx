@@ -66,8 +66,18 @@ export default function Portfolio() {
                   <p className="text-gray-600 leading-relaxed">
                     静岡大学情報学部情報社会学科の3年生として、認知科学の分野で研究に取り組んでいます。
                     白砂研究室に所属し、適応的道具箱に関する研究を行っています。
-                    指導教員：白砂大先生（<a href="https://sites.google.com/view/masaru-shirasuna/home" target="_blank" rel="noopener noreferrer">https://sites.google.com/view/masaru-shirasuna/home</a>）
                   </p>
+                  <div className="mt-4">
+                    <p className="text-gray-600">
+                      指導教員：白砂大先生（
+                      <Button variant="link" size="sm" className="p-0 h-auto font-normal" asChild>
+                        <Link href="https://sites.google.com/view/masaru-shirasuna/home" target="_blank" rel="noopener noreferrer">
+                          https://sites.google.com/view/masaru-shirasuna/home
+                        </Link>
+                      </Button>
+                      ）
+                    </p>
+                  </div>
                   <p className="text-gray-600 leading-relaxed">
                     人間の認知プロセスと情報処理の関係性について深く探求し、
                     社会における情報技術の役割を理解することを目指しています。
@@ -217,18 +227,24 @@ export default function Portfolio() {
                 <p className="text-gray-600">
                   研究に関するご質問や共同研究のご提案がございましたら、お気軽にお声がけください。
                 </p>
-                <div className="flex justify-center space-x-4">
-                  <Button variant="outline" size="lg">
-                    <Mail className="mr-2 h-4 w-4" />
-                    Email
+                <div className="flex justify-center flex-wrap gap-4">
+                  <Button variant="outline" size="lg" asChild>
+                    <Link href="mailto:your-email@example.com" className="hover:bg-accent transition-colors">
+                      <Mail className="mr-2 h-4 w-4" />
+                      Email
+                    </Link>
                   </Button>
-                  <Button variant="outline" size="lg">
-                    <Github className="mr-2 h-4 w-4" />
-                    GitHub
+                  <Button variant="outline" size="lg" asChild>
+                    <Link href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:bg-accent transition-colors">
+                      <Github className="mr-2 h-4 w-4" />
+                      GitHub
+                    </Link>
                   </Button>
-                  <Button variant="outline" size="lg">
-                    <Linkedin className="mr-2 h-4 w-4" />
-                    LinkedIn
+                  <Button variant="outline" size="lg" asChild>
+                    <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:bg-accent transition-colors">
+                      <Linkedin className="mr-2 h-4 w-4" />
+                      LinkedIn
+                    </Link>
                   </Button>
                 </div>
                 <div className="pt-4 border-t">
