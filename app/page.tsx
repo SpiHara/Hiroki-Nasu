@@ -70,12 +70,11 @@ export default function Portfolio() {
                   <div className="mt-4">
                     <p className="text-gray-600">
                       指導教員：
-                      <Button variant="link" size="sm" className="p-0 h-auto font-normal" asChild>
+                      <Button variant="link" size="sm" className="p-0 h-auto font-normal text-gray-600 hover:text-gray-800" asChild>
                         <Link href="https://sites.google.com/view/masaru-shirasuna/home" target="_blank" rel="noopener noreferrer">
                           白砂大先生
                         </Link>
                       </Button>
-                      （https://sites.google.com/view/masaru-shirasuna/home）
                     </p>
                   </div>
                   <p className="text-gray-600 leading-relaxed">
