@@ -11,7 +11,7 @@ import { ProtectedImage } from "@/components/ui/protected-image"
 
 export default function Portfolio() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen bg-background">
       
 
       {/* Hero Section */}
@@ -20,10 +20,10 @@ export default function Portfolio() {
           <div className="space-y-4">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">奈須大輝</h1>
             <h2 className="text-xl text-muted-foreground sm:text-2xl">Hiroki Nasu</h2>
-            <p className="mx-auto max-w-[700px] text-gray-600 md:text-xl">
+            <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
               静岡大学情報学部白砂研究室 | 認知科学研究者
             </p>
-            <p className="mx-auto max-w-[600px] text-gray-500">Cognitive Science Researcher at Shizuoka University</p>
+            <p className="mx-auto max-w-[600px] text-muted-foreground">Cognitive Science Researcher at Shizuoka University</p>
           </div>
           <div className="flex space-x-4">
             <Button asChild>
@@ -63,21 +63,21 @@ export default function Portfolio() {
                 </div>
                 <div className="space-y-4">
                   <h3 className="text-xl font-semibold">自己紹介</h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed">
                     静岡大学情報学部情報社会学科の3年生として、認知科学の分野で研究に取り組んでいます。
                     白砂研究室に所属し、適応的道具箱に関する研究を行っています。
                   </p>
                   <div className="mt-4">
-                    <p className="text-gray-600">
+                    <p className="text-muted-foreground">
                       指導教員：
-                      <Button variant="link" size="sm" className="p-0 h-auto font-normal text-gray-600 hover:text-gray-800" asChild>
+                      <Button variant="link" size="sm" className="p-0 h-auto font-normal" asChild>
                         <Link href="https://sites.google.com/view/masaru-shirasuna/home" target="_blank" rel="noopener noreferrer">
                           白砂大先生
                         </Link>
                       </Button>
                     </p>
                   </div>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed">
                     人間の認知プロセスと情報処理の関係性について深く探求し、
                     社会における情報技術の役割を理解することを目指しています。
                   </p>
@@ -91,15 +91,15 @@ export default function Portfolio() {
                   </div>
                   <div className="space-y-2 pt-4">
                     <div className="flex items-center space-x-2">
-                      <Brain className="h-4 w-4 text-blue-600" />
+                      <Brain className="h-4 w-4 text-blue-600 dark:text-blue-400" />
                       <span className="text-sm">認知プロセス研究</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <Users className="h-4 w-4 text-green-600" />
+                      <Users className="h-4 w-4 text-green-600 dark:text-green-400" />
                       <span className="text-sm">社会情報学</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <BookOpen className="h-4 w-4 text-purple-600" />
+                      <BookOpen className="h-4 w-4 text-purple-600 dark:text-purple-400" />
                       <span className="text-sm">学際的研究</span>
                     </div>
                   </div>
@@ -117,7 +117,7 @@ export default function Portfolio() {
           <Card>
             <CardHeader>
               <div className="flex items-center space-x-4">
-                <GraduationCap className="h-8 w-8 text-blue-600" />
+                <GraduationCap className="h-8 w-8 text-blue-600 dark:text-blue-400" />
                 <div>
                   <CardTitle>静岡大学 情報学部 情報社会学科</CardTitle>
                   <CardDescription>Shizuoka University, Faculty of Informatics</CardDescription>
@@ -136,7 +136,7 @@ export default function Portfolio() {
                 <Separator />
                 <div>
                   <h4 className="font-semibold mb-2">所属研究室</h4>
-                  <p className="text-gray-600">白砂研究室 (Shirasuna Laboratory)</p>
+                  <p className="text-foreground">白砂研究室 (Shirasuna Laboratory)</p>
                   <p className="text-sm text-muted-foreground mt-1">認知科学・情報処理・人間工学分野での研究活動</p>
                 </div>
               </div>
@@ -153,30 +153,30 @@ export default function Portfolio() {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center space-x-2">
-                  <Brain className="h-5 w-5 text-blue-600" />
+                  <Brain className="h-5 w-5 text-blue-600 dark:text-blue-400" />
                   <span>適応的道具箱</span>
                 </CardTitle>
                 <CardDescription>Adaptive Toolbox Research</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed">
                     人間の認知システムにおける適応的道具箱の概念について研究しています。
                     この研究では、人間がどのように状況に応じて異なる認知戦略を選択し、
                     問題解決に取り組むかを探求しています。
                   </p>
                   <div className="grid gap-3 md:grid-cols-2">
-                    <div className="p-4 bg-blue-50 rounded-lg">
-                      <h4 className="font-semibold text-blue-900 mb-2">研究アプローチ</h4>
-                      <ul className="text-sm text-blue-800 space-y-1">
+                    <div className="p-4 bg-blue-50 dark:bg-blue-950/30 rounded-lg border border-blue-200 dark:border-blue-800">
+                      <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">研究アプローチ</h4>
+                      <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
                         <li>• 認知実験による検証</li>
                         <li>• 行動データの分析</li>
                         <li>• 理論モデルの構築</li>
                       </ul>
                     </div>
-                    <div className="p-4 bg-green-50 rounded-lg">
-                      <h4 className="font-semibold text-green-900 mb-2">応用分野</h4>
-                      <ul className="text-sm text-green-800 space-y-1">
+                    <div className="p-4 bg-green-50 dark:bg-green-950/30 rounded-lg border border-green-200 dark:border-green-800">
+                      <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">応用分野</h4>
+                      <ul className="text-sm text-green-800 dark:text-green-200 space-y-1">
                         <li>• 教育システム設計</li>
                         <li>• ユーザーインターフェース</li>
                         <li>• 意思決定支援</li>
@@ -195,17 +195,17 @@ export default function Portfolio() {
               <CardContent>
                 <div className="grid gap-4 md:grid-cols-3">
                   <div className="text-center p-4 border rounded-lg">
-                    <Brain className="h-8 w-8 mx-auto mb-2 text-purple-600" />
+                    <Brain className="h-8 w-8 mx-auto mb-2 text-purple-600 dark:text-purple-400" />
                     <h4 className="font-semibold">認知科学</h4>
                     <p className="text-sm text-muted-foreground">Cognitive Science</p>
                   </div>
                   <div className="text-center p-4 border rounded-lg">
-                    <Users className="h-8 w-8 mx-auto mb-2 text-blue-600" />
+                    <Users className="h-8 w-8 mx-auto mb-2 text-blue-600 dark:text-blue-400" />
                     <h4 className="font-semibold">情報社会学</h4>
                     <p className="text-sm text-muted-foreground">Information Sociology</p>
                   </div>
                   <div className="text-center p-4 border rounded-lg">
-                    <BookOpen className="h-8 w-8 mx-auto mb-2 text-green-600" />
+                    <BookOpen className="h-8 w-8 mx-auto mb-2 text-green-600 dark:text-green-400" />
                     <h4 className="font-semibold">学際研究</h4>
                     <p className="text-sm text-muted-foreground">Interdisciplinary Studies</p>
                   </div>
@@ -223,7 +223,7 @@ export default function Portfolio() {
           <Card>
             <CardContent className="p-8">
               <div className="space-y-6">
-                <p className="text-gray-600">
+                <p className="text-muted-foreground">
                   研究に関するご質問や共同研究のご提案がございましたら、お気軽にお声がけください。
                 </p>
                 <div className="flex justify-center flex-wrap gap-4">
