@@ -1,7 +1,9 @@
+import { fileURLToPath } from 'url'
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
+  turbopack: {
+    root: fileURLToPath(new URL('.', import.meta.url)),
   },
   typescript: {
     ignoreBuildErrors: true,
