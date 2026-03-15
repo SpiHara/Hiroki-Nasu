@@ -8,7 +8,7 @@ export default function ContactPage() {
   const handleSelect = (value: string) => {
     if (value === "email") {
       // メールソフトを起動して宛先をセット
-      window.location.href = "mailto:nasu.hiroki.23@shiuzoka.ac.jp"
+      window.location.href = "mailto:nasu.hiroki.23@shizuoka.ac.jp"
     } else if (value === "github") {
       // GitHubプロフィールを新しいタブで開く
       window.open("https://github.com/SpiHara", "_blank")
@@ -19,7 +19,7 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 to-indigo-50">
+    <div className="min-h-[calc(100vh-3.5rem)] flex items-center justify-center bg-gradient-to-br from-purple-50 to-indigo-50">
       <div className="bg-white shadow-lg rounded-xl p-8 w-full max-w-md text-center">
         <h1 className="text-2xl font-bold mb-6 text-gray-800">お問い合わせ方法</h1>
 

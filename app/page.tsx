@@ -228,10 +228,10 @@ export default function Portfolio() {
                 </p>
                 <div className="flex justify-center flex-wrap gap-4">
                   <Button variant="outline" size="lg" asChild>
-                    <Link href="mailto:your-email@example.com" className="hover:bg-accent transition-colors">
+                    <a href="mailto:nasu.hiroki.23@shizuoka.ac.jp" className="hover:bg-accent transition-colors">
                       <Mail className="mr-2 h-4 w-4" />
                       Email
-                    </Link>
+                    </a>
                   </Button>
                   <Button variant="outline" size="lg" asChild>
                     <Link href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:bg-accent transition-colors">
