@@ -3,85 +3,60 @@
 import { useEffect } from "react"
 
 /**
- * サイト内のすべての画像に対してダウンロード防止機能を追加するコンポーネント
- * 
- * このコンポーネントは以下の機能を実装します：
- * - 画像の右クリックコンテキストメニューを無効化
- * - 画像のドラッグ＆ドロップを無効化
- * - 画像の選択を無効化
- * - キーボードショートカット（Ctrl+S, Ctrl+Shift+Iなど）による画像の保存を防止
+ * サイト内の画像に対して「右クリック保存」をしにくくするための保護コンポーネント。
+ *
+ * 注意: Webの仕様上、画像の保存を完全に防ぐことはできません。
+ * ただし一般的な操作（右クリックメニュー・ドラッグ）を抑止します。
+ *
+ * 実装方針:
+ * - document でイベント委譲（capture）し、動的に追加された画像にも自動適用
+ * - img への個別 addEventListener を避けて二重登録/リークを防止
  */
 export default function ImageProtection() {
   useEffect(() => {
-    // すべての画像要素に対してイベントリスナーを追加
-    const protectImages = () => {
-      const images = document.querySelectorAll("img")
-      
-      images.forEach((img) => {
-        // 右クリック防止
-        img.addEventListener("contextmenu", (e) => {
-          e.preventDefault()
-          return false
-        })
-        
-        // ドラッグ防止
-        img.addEventListener("dragstart", (e) => {
-          e.preventDefault()
-          return false
-        })
-        
-        // 選択防止
-        img.addEventListener("selectstart", (e) => {
-          e.preventDefault()
-          return false
-        })
-        
-        // draggable属性を無効化
-        img.setAttribute("draggable", "false")
-        
-        // CSSクラスを追加（既にglobals.cssで定義済み）
-        img.classList.add("select-none")
-      })
+    const hasImageInEventPath = (e: Event) => {
+      const anyEvent = e as unknown as { composedPath?: () => EventTarget[] }
+      const path = typeof anyEvent.composedPath === "function" ? anyEvent.composedPath() : []
+      if (path.some((node) => node instanceof HTMLImageElement)) return true
+
+      const target = e.target
+      if (!(target instanceof Element)) return false
+      return Boolean(target.closest("img"))
     }
 
-    // 初回実行
-    protectImages()
-
-    // 動的に追加された画像にも対応するため、MutationObserverを使用
-    const observer = new MutationObserver(() => {
-      protectImages()
-    })
-
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true,
-    })
-
-    // キーボードショートカット防止（開発者ツールや保存を試みる操作を防止）
-    const handleKeyDown = (e: KeyboardEvent) => {
-      // Ctrl+S または Cmd+S（画像の保存を試みる操作を防止）
-      if ((e.ctrlKey || e.metaKey) && e.key === "s") {
-        e.preventDefault()
-        return false
-      }
-      
-      // F12、Ctrl+Shift+I、Ctrl+Shift+J（開発者ツールを開く操作を防止）
-      if (
-        e.key === "F12" ||
-        ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "I" || e.key === "J"))
-      ) {
-        // 注意: 完全に防ぐことはできませんが、一般ユーザーには有効です
-        e.preventDefault()
-        return false
-      }
+    const handleContextMenu = (e: MouseEvent) => {
+      if (!hasImageInEventPath(e)) return
+      e.preventDefault()
+      e.stopPropagation()
     }
 
-    document.addEventListener("keydown", handleKeyDown)
+    const handleDragStart = (e: DragEvent) => {
+      if (!hasImageInEventPath(e)) return
+      e.preventDefault()
+      e.stopPropagation()
+    }
 
-    // クリーンアップ
+    const handleSelectStart = (e: Event) => {
+      if (!hasImageInEventPath(e)) return
+      e.preventDefault()
+      e.stopPropagation()
+    }
+
+    // 既存の画像は念のため draggable=false にしておく（動的追加分は dragstart 側で抑止）
+    document.querySelectorAll("img").forEach((img) => {
+      img.setAttribute("draggable", "false")
+      img.classList.add("select-none")
+    })
+
+    // capture で先に握っておくと、ライブラリ側のハンドラより確実に抑止できる
+    document.addEventListener("contextmenu", handleContextMenu, true)
+    document.addEventListener("dragstart", handleDragStart, true)
+    document.addEventListener("selectstart", handleSelectStart, true)
+
     return () => {
-      observer.disconnect()
-      document.removeEventListener("keydown", handleKeyDown)
+      document.removeEventListener("contextmenu", handleContextMenu, true)
+      document.removeEventListener("dragstart", handleDragStart, true)
+      document.removeEventListener("selectstart", handleSelectStart, true)
     }
   }, [])
 

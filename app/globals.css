@@ -90,6 +90,7 @@
   
   /* 画像のダウンロード防止スタイル */
   img {
+    -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -103,6 +104,7 @@
   
   /* Next.js Imageコンポーネント用 */
   img[data-nimg] {
+    -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
