@@ -64,8 +64,8 @@ export default function Portfolio() {
                 <div className="space-y-4">
                   <h3 className="text-xl font-semibold">自己紹介</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    静岡大学情報学部情報社会学科の3年生として、認知科学の分野で研究に取り組んでいます。
-                    白砂研究室に所属し、適応的道具箱に関する研究を行っています。
+                    静岡大学情報学部情報社会学科の4年生として、認知科学の分野で研究に取り組んでいます。
+                    白砂研究室に所属し、人間の判断特性のモデル化、意思決定支援に関する研究を行っています。
                   </p>
                   <div className="mt-4">
                     <p className="text-muted-foreground">
@@ -87,7 +87,7 @@ export default function Portfolio() {
                     <Badge variant="secondary">適応的道具箱</Badge>
                     <Badge variant="secondary">情報処理</Badge>
                     <Badge variant="secondary">人間工学</Badge>
-                    <Badge variant="secondary">認知心理学</Badge>
+                    <Badge variant="secondary">意思決定支援</Badge>
                   </div>
                   <div className="space-y-2 pt-4">
                     <div className="flex items-center space-x-2">
@@ -128,8 +128,8 @@ export default function Portfolio() {
               <div className="space-y-4">
                 <div className="flex justify-between items-start">
                   <div>
-                    <h4 className="font-semibold">学士課程 3年生</h4>
-                    <p className="text-sm text-muted-foreground">Bachelor's Program, 3rd Year</p>
+                    <h4 className="font-semibold">学士課程 4年生</h4>
+                    <p className="text-sm text-muted-foreground">Bachelor's Program, 4th Year</p>
                   </div>
                   <Badge variant="outline">在学中</Badge>
                 </div>
@@ -154,16 +154,15 @@ export default function Portfolio() {
               <CardHeader>
                 <CardTitle className="flex items-center space-x-2">
                   <Brain className="h-5 w-5 text-blue-600 dark:text-blue-400" />
-                  <span>適応的道具箱</span>
+                  <span>人間の判断特性のモデル化</span>
                 </CardTitle>
-                <CardDescription>Adaptive Toolbox Research</CardDescription>
+                <CardDescription>Human Decision-Making Models</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
                   <p className="text-muted-foreground leading-relaxed">
-                    人間の認知システムにおける適応的道具箱の概念について研究しています。
-                    この研究では、人間がどのように状況に応じて異なる認知戦略を選択し、
-                    問題解決に取り組むかを探求しています。
+                    実験データを用いて、人間の意思決定時の認知バイアスの数理モデル化とその計算機実装について研究しています。
+                    人間の判断能力やパフォーマンスを最適に引き出す支援手法を探求しています。
                   </p>
                   <div className="grid gap-3 md:grid-cols-2">
                     <div className="p-4 bg-blue-50 dark:bg-blue-950/30 rounded-lg border border-blue-200 dark:border-blue-800">
@@ -234,7 +233,7 @@ export default function Portfolio() {
                     </a>
                   </Button>
                   <Button variant="outline" size="lg" asChild>
-                    <Link href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:bg-accent transition-colors">
+                    <Link href="https://github.com/SpiHara" target="_blank" rel="noopener noreferrer" className="hover:bg-accent transition-colors">
                       <Github className="mr-2 h-4 w-4" />
                       GitHub
                     </Link>
