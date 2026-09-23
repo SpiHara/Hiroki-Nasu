@@ -15,7 +15,7 @@ export default function Portfolio() {
       
 
       {/* Hero Section */}
-      <section className="container py-24 md:py-32">
+      <section className="container mx-auto py-24 md:py-32">
         <div className="flex flex-col items-center text-center space-y-8">
           <div className="space-y-4">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">奈須大輝</h1>
@@ -43,7 +43,7 @@ export default function Portfolio() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="container py-16">
+      <section id="about" className="container mx-auto py-16">
         <div className="mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold tracking-tighter mb-8 text-center">About Me</h2>
           <Card>
@@ -111,7 +111,7 @@ export default function Portfolio() {
       </section>
 
       {/* Education Section */}
-      <section id="education" className="container py-16 bg-muted/30">
+      <section id="education" className="container mx-auto py-16 bg-muted/30">
         <div className="mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold tracking-tighter mb-8 text-center">Education</h2>
           <Card>
@@ -146,7 +146,7 @@ export default function Portfolio() {
       </section>
 
       {/* Research Section */}
-      <section id="research" className="container py-16">
+      <section id="research" className="container mx-auto py-16">
         <div className="mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold tracking-tighter mb-8 text-center">Research</h2>
           <div className="grid gap-6">
@@ -216,7 +216,7 @@ export default function Portfolio() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="container py-16 bg-muted/30">
+      <section id="contact" className="container mx-auto py-16 bg-muted/30">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tighter mb-8">Contact</h2>
           <Card>
