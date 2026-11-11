@@ -5,9 +5,6 @@ const nextConfig = {
   turbopack: {
     root: fileURLToPath(new URL('.', import.meta.url)),
   },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
   images: {
     unoptimized: true,
   },
